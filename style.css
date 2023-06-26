@@ -1,0 +1,88 @@
+body {margin: 0}
+main {
+  height: 100vh;
+  perspective:2px;
+  overflow: hidden auto;
+  font-family:sans-serif
+}
+h1 {font-size: 3rem; color: #fff; padding: 2rem}
+h1, footer {
+  text-align: center;
+}
+
+section {
+  transform-style: preserve-3d;
+  position: relative;
+  height: 55vh;
+  display: grid;
+  place-items: center;
+}
+
+.noparallax {
+  background: #fff;
+  z-index: 1;
+  height:100vh;
+  color: #000;
+  font-size: 155px;
+}
+
+.parallax {
+  height: 120vh;
+}
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  left:0;
+  bottom:0;
+  background-size: 100%;
+  transform: translateZ(-2.3px) scale(1.9);
+}
+.bg::after {
+    background: url("/2.jpg");
+  background-size: cover;
+}
+.bg1::after {
+  background: url("/4.jpg");
+  background-size: cover;
+}
+.bg2::after {
+  background-image: url("/1.jpg");
+  background-size: cover;
+}
+
+.bg3::after {
+  background-image: url("/3.jpg");
+  background-size: cover;
+}
+main::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+main::-webkit-scrollbar-thumb {
+    background: transparent; /* Optional: just make scrollbar thumb invisible */
+}
+
+@-moz-document url-prefix() {
+  main {
+    scrollbar-width: none;
+    scrollbar-color: transparent;
+  }
+}
+
+.slide-this {
+    z-index: 11;
+    background-color: gray;
+    width: 75vw;
+    transform: translate(-110%, 0);
+    transition: transform 0.75s ease;
+
+}
+
+.slide-this.visible {
+  transform: translate(3%, -5%);
+}

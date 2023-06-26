@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite Parallax</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+    <main>
+      <section class="parallax bg">
+        <h1 style="font-size: 150px;">Parallax Test</h1>
+      </section>
+    
+      <section class="parallax" style="background-color: black;">
+        <h2 style="font-size: 150px; color: white; text-transform: uppercase;">Static item</h2>
+      </section>
+    
+      <section class="parallax bg1">
+        <h1>Parallax again here</h1>
+      </section>
+    
+      <section class="noparallax" style="background-color: #fff;">
+        <h2>Static item</h2>
+      </section>
+      <section id="slideThis" class="slide-this">
+        <h1>Item slide</h1>
+      </section>
+    
+      <section  id="testSlide" class="parallax bg2">
+      </section>
+    
+      <section class="noparallax" style="background-color: #fff;">
+        <h2>Static item again</h2>
+      </section>
+    
+      <section class="parallax bg3">
+      </section>
+    </main>
+    <footer>
+      that all folks!
+    </footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
